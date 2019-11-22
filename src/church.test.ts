@@ -1,4 +1,15 @@
-import { False, True, toInt, Zero, If, One, Two, Three } from "./church"
+import {
+  False,
+  True,
+  toInt,
+  Zero,
+  If,
+  One,
+  Two,
+  Three,
+  Fib,
+  fib,
+} from "./church"
 
 test(`True should return first argument`, () => {
   expect(True(1)(2)).toEqual(1)
@@ -21,4 +32,8 @@ test(`Zero should be equal to 0`, () => {
   expect(toInt(One)).toEqual(1)
   expect(toInt(Two)).toEqual(2)
   expect(toInt(Three)).toEqual(3)
+})
+
+test(`Fibonaccis's 10th number should equal to 55`, () => {
+  expect(Fib(10)).toEqual(55)
 })
